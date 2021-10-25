@@ -67,8 +67,7 @@ class Actor {
         }
     }
     
-    void put_actor() const
-    {
+    void put_actor() const {
         terminal_put(location_x, location_y, actorChar);
         terminal_refresh();
     }
