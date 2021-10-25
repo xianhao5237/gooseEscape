@@ -59,8 +59,7 @@ class Actor {
     }
 
     void update_location(int delta_x, int delta_y) {
-        if (can_move(delta_x, delta_y))
-        {
+        if (can_move(delta_x, delta_y)) {
             terminal_clear_area(location_x, location_y, 1, 1);
             location_x += delta_x;
             location_y += delta_y;
