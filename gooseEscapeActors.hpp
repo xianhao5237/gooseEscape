@@ -6,19 +6,6 @@
 #include <BearLibTerminal.h>
 #include "gooseEscapeUtil.hpp"
 
-/*
-    Modify this class to contain more characteristics of the "actor".  Add
-    functions that will be useful for playing the game that are specific to
-    the Actor.
-    Feel free to add additional Classes to your program.
-*/
-
-/* 
-    Going further: Learn the other syntax for implementing a class that is
-    more appropriate for working with multiple files, and improve the class 
-	code.
-*/
-
 class Actor
 {
   private:
