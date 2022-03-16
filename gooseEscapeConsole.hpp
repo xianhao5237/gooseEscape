@@ -5,8 +5,7 @@ using namespace std;
 #include <BearLibTerminal.h>
 #include "gooseEscapeUtil.hpp"
 
-class Console
-{
+class Console {
   private:
 	string messages[NUM_CONSOLE_Y];
 	int messageRow;
@@ -36,8 +35,7 @@ class Console
 		
         // output all message rows to the console		 
         for(int line = 0; line < NUM_CONSOLE_Y; line++)
-            terminal_print(MIN_CONSOLE_X, MIN_CONSOLE_Y + line, 
-							messages[line].c_str());
+            terminal_print(MIN_CONSOLE_X, MIN_CONSOLE_Y + line, messages[line].c_str());
 		
         terminal_refresh();
     }
