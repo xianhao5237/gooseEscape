@@ -15,8 +15,7 @@ extern Console out;
 const int RANDOM_NUM_RANGE = 3; // range of random numbers
 
 // print the game board 
-void printBoard (int board[NUM_BOARD_X][NUM_BOARD_Y], 
-					Actor player, Actor monster) {
+void printBoard (int board[NUM_BOARD_X][NUM_BOARD_Y], Actor player, Actor monster) {
 	//loop through board array
 	for(int index1 = 0; index1 < NUM_BOARD_X; index1++) {
     		for(int index2 = 0; index2 < NUM_BOARD_Y; index2++) {
@@ -37,8 +36,7 @@ void printBoard (int board[NUM_BOARD_X][NUM_BOARD_Y],
 
 
 bool captured(Actor & player, Actor & monster) {
-    bool captured  = (player.get_x() == monster.get_x() 
-         && player.get_y() == monster.get_y());
+    bool captured  = (player.get_x() == monster.get_x() && player.get_y() == monster.get_y());
          
 	// if the player has a shield when captured, the goose respawn to 
 	//its orginal position and the player does not lose the game.
