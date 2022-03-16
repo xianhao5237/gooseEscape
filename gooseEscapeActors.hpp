@@ -54,8 +54,7 @@ class Actor {
         int new_x = location_x + delta_x;
         int new_y = location_y + delta_y;
 
-        return new_x >= MIN_BOARD_X && new_x <= MAX_BOARD_X
-          && new_y >= MIN_BOARD_Y && new_y <= MAX_BOARD_Y;
+        return new_x >= MIN_BOARD_X && new_x <= MAX_BOARD_X && new_y >= MIN_BOARD_Y && new_y <= MAX_BOARD_Y;
     }
 
     void update_location(int delta_x, int delta_y) {
@@ -80,7 +79,7 @@ class Actor {
     }
     
     // check if player has a shield
-	bool isShield() const {
+    bool isShield() const {
         return shield;
     }
 	// add or remove shield
