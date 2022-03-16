@@ -100,8 +100,7 @@ void movePlayer(int key, Actor & player, int board[NUM_BOARD_X][NUM_BOARD_Y]) {
         xMove = 1;
         
         //checks if move is valid
-    if (board[player.get_x() + xMove][player.get_y() + yMove] 
-		!= SHALL_NOT_PASS)
+    if (board[player.get_x() + xMove][player.get_y() + yMove] != SHALL_NOT_PASS)
         player.update_location(xMove, yMove);
 }
 
@@ -120,15 +119,13 @@ void moveGoose(Actor & player, Actor & monster, int board[NUM_BOARD_X][NUM_BOARD
         yMove = 1;
 
      //if will hit wall
-    if (board[monster.get_x() + xMove][monster.get_y() + yMove] 
-        == SHALL_NOT_PASS)
-    {
+    if (board[monster.get_x() + xMove][monster.get_y() + yMove] == SHALL_NOT_PASS) {
         srand (time(NULL));
         int randomNum = rand() % RANDOM_NUM_RANGE;
 
         if(randomNum == 0) {//33% chance to jump over wall
 
-        	xMove *= 2;
+            xMove *= 2;
             yMove *= 2;
         }
         else { // if not jumping over wall, could move horzional or vertical
@@ -146,10 +143,7 @@ void moveGoose(Actor & player, Actor & monster, int board[NUM_BOARD_X][NUM_BOARD
         xMove *= 2;
 
     // goose cannot land on a wall
-    if (board[monster.get_x() + xMove][monster.get_y() + yMove] 
-            != SHALL_NOT_PASS 
-            && board[monster.get_x() + xMove][monster.get_y() + yMove] 
-            != WINNER)
+    if (board[monster.get_x() + xMove][monster.get_y() + yMove] != SHALL_NOT_PASS && board[monster.get_x() + xMove][monster.get_y() + yMove] != WINNER)
         monster.update_location(xMove, yMove);
 }
 
@@ -180,8 +174,7 @@ void maze(ifstream & fin, int board[NUM_BOARD_X][NUM_BOARD_Y]) {
         for(int indexX = 0; indexX < NUM_BOARD_X; indexX++) {
             for(int indexY = 0; indexY < NUM_BOARD_Y; indexY++) {
                 //create walls:
-                if((indexX >= xLocation && indexX < (xLocation+length)) 
-				&& indexY == (yLocation-1))
+                if((indexX >= xLocation && indexX < (xLocation+length)) && indexY == (yLocation-1))
                     board[indexX][indexY] = SHALL_NOT_PASS;
             }
         }
